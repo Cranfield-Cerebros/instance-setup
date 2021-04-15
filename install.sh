@@ -7,6 +7,10 @@ sudo tar -xvzf  OpenFOAM-v2012-windows10.tgz -C /opt/
 sudo chown -R $USER /opt/OpenFOAM
 echo "source /opt/OpenFOAM/OpenFOAM-v2012/etc/bashrc" >> ~/.bashrc
 source $HOME/.bashrc
+cd /opt/OpenFOAM/OpenFOAM-v2012/etc
+rm controlDict
+git clone https://github.com/Cranfield-Cerebros/DisableVerbose
+mv DisableVerbose/controlDict .
 sudo apt-get install default-libmysqlclient-dev libmysqlclient-dev
 cd
 git clone https://github.com/Cranfield-Cerebros/OpenFOAMBasic
