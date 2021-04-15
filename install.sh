@@ -8,11 +8,17 @@ sudo chown -R $USER /opt/OpenFOAM
 echo "source /opt/OpenFOAM/OpenFOAM-v2012/etc/bashrc" >> ~/.bashrc
 source $HOME/.bashrc
 sudo apt-get install default-libmysqlclient-dev libmysqlclient-dev
+cd
 git clone https://github.com/Cranfield-Cerebros/OpenFOAMBasic
 git clone https://github.com/Cranfield-Cerebros/OpenFOAMBasic OpenFOAMBasic2
 cd OpenFOAMBasic
 git clone https://github.com/Cranfield-Cerebros/mesh
 git clone https://github.com/Cranfield-Cerebros/Cerberus-head1
-cd ../OpenFOAMBasic2
+cd Cerberus-head1/src
+make
+cd ../../../OpenFOAMBasic2
 git clone https://github.com/Cranfield-Cerebros/mesh
 git clone https://github.com/Cranfield-Cerebros/Cerberus-head1
+cd Cerberus-head1/src
+make
+cd 
